@@ -1,0 +1,16 @@
+.content {
+  /* height: 600px; */
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.content > .banner {
+  width: 800px;
+  height: 300px;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  margin: 0 auto;
+}
