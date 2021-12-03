@@ -1,5 +1,7 @@
 const express = require('express');
+const { DBconnect } = require('./db/db')
 const viewRouter = require('./routes/views')
+const userRouter = require('./routes/users')
 
 const app = express()
 
@@ -12,5 +14,10 @@ app.use('/node_modules', express.static(__dirname + '/node_modules'))
 
 // 挂载路由表
 app.use('/views', viewRouter)
+app.use('/user', userRouter)
+
+app.use(express.urlencoded())
+
+DBconnect.connect
 
 app.listen(3000, () => console.log('server has running at port 3000!'))
